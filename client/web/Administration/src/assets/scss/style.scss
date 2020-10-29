@@ -1,0 +1,35 @@
+@import "variables";
+@import "~@coreui/coreui/scss/coreui";
+@import "custom";
+
+.card-header:not(.content-center) > .c-icon:first-child {
+  margin-right: 0.1rem;
+  margin-top: 0.1rem;
+  vertical-align: top;
+  width: 1.2rem;
+  height: 1.2rem;
+  font-size: 1.2rem;
+}
+.my-card{
+  padding: 15px;
+}
+.my-template{}
+.vf {
+  //valid feedback
+  width: 100%;
+  padding: 0;
+  font-size: 80%;
+  color: #2eb85c;
+  margin: 0 0 10px 0;
+}
+.ivf {
+  //invalid valid feedback
+  width: 100%;
+  padding: 0;
+  font-size: 80%;
+  color: #ff0000;
+  margin: 0 0 10px 0;
+}
+.ml{
+  margin-top: 15px;
+}
