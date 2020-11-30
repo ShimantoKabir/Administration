@@ -4,22 +4,12 @@ export default [
     _children: [
       {
         _name: 'CSidebarNavItem',
-        name: 'Dashboard',
-        to: '/dashboard',
-        icon: 'cil-speedometer',
-        badge: {
-          color: 'primary',
-          text: 'NEW'
-        }
-      },
-      {
-        _name: 'CSidebarNavItem',
         name: 'Menu',
         to: '/menu',
         icon: 'cil-speedometer',
         badge: {
-          color: 'primary',
-          text: 'NEW'
+          color: 'warning',
+          text: 'DEV MODE'
         }
       },
       {
@@ -198,10 +188,6 @@ export default [
           text: 'NEW',
           shape: 'pill'
         }
-      },
-      {
-        _name: 'CSidebarNavDivider',
-        _class: 'm-2'
       },
       {
         _name: 'CSidebarNavTitle',

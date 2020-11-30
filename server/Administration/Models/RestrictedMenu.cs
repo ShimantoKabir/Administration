@@ -7,9 +7,9 @@ namespace Administration.Models
         public int id { get; set; }
 
         [Required]
-        public int menuId { get; set; }
+        public int menuOid { get; set; }
 
         [Required]
-        public int userId { get; set; }
+        public int userInfoOid { get; set; }
     }
 }

@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Administration.Migrations
 {
     [DbContext(typeof(AdministrationDBCtx))]
-    [Migration("20201028042632_adminstration")]
-    partial class adminstration
+    [Migration("20201103052601_administration")]
+    partial class administration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -41,10 +41,13 @@ namespace Administration.Migrations
                     b.Property<int?>("modifiedBy")
                         .HasColumnType("int");
 
-                    b.Property<int?>("orgId")
+                    b.Property<int>("oId")
                         .HasColumnType("int");
 
-                    b.Property<int>("parentId")
+                    b.Property<int?>("orgOid")
+                        .HasColumnType("int");
+
+                    b.Property<int>("parentOid")
                         .HasColumnType("int");
 
                     b.Property<string>("path")
@@ -53,7 +56,7 @@ namespace Administration.Migrations
                     b.Property<int>("power")
                         .HasColumnType("int");
 
-                    b.Property<int>("projectId")
+                    b.Property<int>("projectOid")
                         .HasColumnType("int");
 
                     b.Property<string>("tooltip")
@@ -79,6 +82,9 @@ namespace Administration.Migrations
                     b.Property<int?>("modifiedBy")
                         .HasColumnType("int");
 
+                    b.Property<int>("oId")
+                        .HasColumnType("int");
+
                     b.Property<string>("orgName")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
@@ -86,6 +92,36 @@ namespace Administration.Migrations
                     b.HasKey("id");
 
                     b.ToTable("organizations");
+                });
+
+            modelBuilder.Entity("Administration.Models.Power", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("createdAt")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("ip")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<int?>("modifiedBy")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("orgOid")
+                        .HasColumnType("int");
+
+                    b.Property<string>("powerName")
+                        .IsRequired()
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<int>("powerValue")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.ToTable("powers");
                 });
 
             modelBuilder.Entity("Administration.Models.Project", b =>
@@ -103,6 +139,9 @@ namespace Administration.Migrations
                     b.Property<int?>("modifiedBy")
                         .HasColumnType("int");
 
+                    b.Property<int>("oId")
+                        .HasColumnType("int");
+
                     b.Property<string>("projectName")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
@@ -118,10 +157,10 @@ namespace Administration.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("menuId")
+                    b.Property<int>("menuOid")
                         .HasColumnType("int");
 
-                    b.Property<int>("userId")
+                    b.Property<int>("userInfoOid")
                         .HasColumnType("int");
 
                     b.HasKey("id");
@@ -142,6 +181,12 @@ namespace Administration.Migrations
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<int?>("modifiedBy")
+                        .HasColumnType("int");
+
+                    b.Property<int>("oId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("orgOid")
                         .HasColumnType("int");
 
                     b.Property<int>("power")
@@ -171,13 +216,19 @@ namespace Administration.Migrations
                     b.Property<int?>("modifiedBy")
                         .HasColumnType("int");
 
-                    b.Property<int?>("orgId")
+                    b.Property<string>("opAccess")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<int>("orgOid")
                         .HasColumnType("int");
 
-                    b.Property<int?>("projectId")
+                    b.Property<int>("projectOid")
                         .HasColumnType("int");
 
-                    b.Property<int?>("roleId")
+                    b.Property<int>("roleOid")
+                        .HasColumnType("int");
+
+                    b.Property<int>("userInfoOid")
                         .HasColumnType("int");
 
                     b.HasKey("id");
@@ -207,10 +258,10 @@ namespace Administration.Migrations
                     b.Property<int?>("modifiedBy")
                         .HasColumnType("int");
 
-                    b.Property<string>("opAccess")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+                    b.Property<int>("oId")
+                        .HasColumnType("int");
 
-                    b.Property<int>("orgId")
+                    b.Property<int?>("orgOid")
                         .HasColumnType("int");
 
                     b.Property<string>("password")
@@ -229,6 +280,52 @@ namespace Administration.Migrations
                     b.HasKey("id");
 
                     b.ToTable("userInfos");
+
+                    b.HasData(
+                        new
+                        {
+                            id = 1,
+                            createdAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            email = "developer@mail.com",
+                            oId = 1,
+                            orgOid = 0,
+                            password = "3dacbce532ccd48f27fa62e993067b3c35f094f7",
+                            userId = "developer",
+                            userName = "developer"
+                        },
+                        new
+                        {
+                            id = 2,
+                            createdAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            email = "qa@mail.com",
+                            oId = 2,
+                            orgOid = 0,
+                            password = "d3c583412a36313ab5e24293924c39a36b842c56",
+                            userId = "qa",
+                            userName = "qa"
+                        },
+                        new
+                        {
+                            id = 3,
+                            createdAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            email = "cto@mail.com",
+                            oId = 3,
+                            orgOid = 0,
+                            password = "19f7ca240c1a90751ff47695616871db95411694",
+                            userId = "cto",
+                            userName = "cto"
+                        },
+                        new
+                        {
+                            id = 4,
+                            createdAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            email = "ceo@mail.com",
+                            oId = 4,
+                            orgOid = 0,
+                            password = "9d382342daac150ef51c8383dcf21ff57743b96d",
+                            userId = "ceo",
+                            userName = "ceo"
+                        });
                 });
 #pragma warning restore 612, 618
         }

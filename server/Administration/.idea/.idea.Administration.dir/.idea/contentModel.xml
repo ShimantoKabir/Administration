@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_.19.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Administration.csproj" t="IncludeRecursive" />
+      <e p="Controllers" t="Include">
+        <e p="MenuCtl.cs" t="Include" />
+        <e p="TestCtl.cs" t="Include" />
+        <e p="UserInfoCtl.cs" t="Include" />
+      </e>
+      <e p="Database" t="Include">
+        <e p="AdministrationDBCtx.cs" t="Include" />
+      </e>
+      <e p="Migrations" t="Include">
+        <e p="20201103052601_administration.Designer.cs" t="Include" />
+        <e p="20201103052601_administration.cs" t="Include" />
+        <e p="AdministrationDBCtxModelSnapshot.cs" t="Include" />
+      </e>
+      <e p="Models" t="Include">
+        <e p="Menu.cs" t="Include" />
+        <e p="Organization.cs" t="Include" />
+        <e p="Power.cs" t="Include" />
+        <e p="Project.cs" t="Include" />
+        <e p="Request.cs" t="Include" />
+        <e p="Response.cs" t="Include" />
+        <e p="RestrictedMenu.cs" t="Include" />
+        <e p="Role.cs" t="Include" />
+        <e p="SmtpSetting.cs" t="Include" />
+        <e p="UserConfiguration.cs" t="Include" />
+        <e p="UserInfo.cs" t="Include" />
+      </e>
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="launchSettings.json" t="Include" />
+      </e>
+      <e p="Repository" t="Include">
+        <e p="MenuRpo" t="Include">
+          <e p="MenuRpo.cs" t="Include" />
+          <e p="MenuRpoImp.cs" t="Include" />
+        </e>
+        <e p="UserInfoRpo" t="Include">
+          <e p="UserInfoRpo.cs" t="Include" />
+          <e p="UserInfoRpoImp.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Seed" t="Include">
+        <e p="MenuSeeder.cs" t="Include" />
+        <e p="PowerSeeder.cs" t="Include" />
+        <e p="UserInfoSeeder.cs" t="Include" />
+      </e>
+      <e p="Services" t="Include">
+        <e p="Mailer.cs" t="Include" />
+      </e>
+      <e p="Startup.cs" t="Include" />
+      <e p="appsettings.Development.json" t="Include" />
+      <e p="appsettings.json" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp3.1" t="Include">
+            <e p="Administration.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

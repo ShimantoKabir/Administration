@@ -14,50 +14,50 @@ export default class HttpHandler {
         });
 
         return axios.post(Url, Data)
-            .catch(error => {
+        .catch(error => {
 
-                console.log(JSON.stringify(error.message));
+            console.log(JSON.stringify(error.message));
 
-                if (error.response.data) {
+            if (error.response.data) {
 
-                    if (error.response.data.message) {
+                if (error.response.data.message) {
 
-                        Alert.show({
-                            title: 'Error',
-                            bodyIcon: 'fas fa-exclamation-circle',
-                            bodyMsg: error.response.data.message,
-                            onCallBack: CallBackFunction,
-                            try: true,
-                            code: error.response.status
-                        });
+                    Alert.show({
+                        title: 'Error',
+                        bodyIcon: 'fas fa-exclamation-circle',
+                        bodyMsg: error.response.data.message,
+                        onCallBack: CallBackFunction,
+                        try: true,
+                        code: error.response.status
+                    });
 
-                    } else if (error.response.data.exception) {
+                } else if (error.response.data.exception) {
 
-                        Alert.show({
-                            title: 'Error',
-                            bodyIcon: 'fas fa-exclamation-circle',
-                            bodyMsg: error.response.data.exception,
-                            onCallBack: CallBackFunction,
-                            try: true,
-                            code: error.response.status
-                        });
+                    Alert.show({
+                        title: 'Error',
+                        bodyIcon: 'fas fa-exclamation-circle',
+                        bodyMsg: error.response.data.exception,
+                        onCallBack: CallBackFunction,
+                        try: true,
+                        code: error.response.status
+                    });
 
-                    } else {
+                } else {
 
-                        Alert.show({
-                            title: 'Error',
-                            bodyIcon: 'fas fa-exclamation-circle',
-                            bodyMsg: error.response.data,
-                            onCallBack: CallBackFunction,
-                            try: true,
-                            code: error.response.status
-                        });
-
-                    }
+                    Alert.show({
+                        title: 'Error',
+                        bodyIcon: 'fas fa-exclamation-circle',
+                        bodyMsg: error.response.data,
+                        onCallBack: CallBackFunction,
+                        try: true,
+                        code: error.response.status
+                    });
 
                 }
 
-            });
+            }
+
+        });
 
     }
 
@@ -75,50 +75,50 @@ export default class HttpHandler {
         });
 
         return axios.put(Url, Data)
-            .catch(error => {
+        .catch(error => {
 
-                console.log(JSON.stringify(error));
+            console.log(JSON.stringify(error));
 
-                if (error.response.data) {
+            if (error.response.data) {
 
-                    if (error.response.data.message) {
+                if (error.response.data.message) {
 
-                        Alert.show({
-                            title: 'Error',
-                            bodyIcon: 'fas fa-exclamation-circle',
-                            bodyMsg: error.response.data.message,
-                            onCallBack: CallBackFunction,
-                            try: true,
-                            code: error.response.status
-                        });
+                    Alert.show({
+                        title: 'Error',
+                        bodyIcon: 'fas fa-exclamation-circle',
+                        bodyMsg: error.response.data.message,
+                        onCallBack: CallBackFunction,
+                        try: true,
+                        code: error.response.status
+                    });
 
-                    } else if (error.response.data.exception) {
+                } else if (error.response.data.exception) {
 
-                        Alert.show({
-                            title: 'Error',
-                            bodyIcon: 'fas fa-exclamation-circle',
-                            bodyMsg: error.response.data.exception,
-                            onCallBack: CallBackFunction,
-                            try: true,
-                            code: error.response.status
-                        });
+                    Alert.show({
+                        title: 'Error',
+                        bodyIcon: 'fas fa-exclamation-circle',
+                        bodyMsg: error.response.data.exception,
+                        onCallBack: CallBackFunction,
+                        try: true,
+                        code: error.response.status
+                    });
 
-                    } else {
+                } else {
 
-                        Alert.show({
-                            title: 'Error',
-                            bodyIcon: 'fas fa-exclamation-circle',
-                            bodyMsg: error.response.data,
-                            onCallBack: CallBackFunction,
-                            try: true,
-                            code: error.response.status
-                        });
-
-                    }
+                    Alert.show({
+                        title: 'Error',
+                        bodyIcon: 'fas fa-exclamation-circle',
+                        bodyMsg: error.response.data,
+                        onCallBack: CallBackFunction,
+                        try: true,
+                        code: error.response.status
+                    });
 
                 }
 
-            });
+            }
+
+        });
 
     }
 
@@ -135,50 +135,50 @@ export default class HttpHandler {
         });
 
         return axios.get(Url)
-            .catch(error => {
+        .catch(error => {
 
-                console.log(JSON.stringify(error));
+            console.log(JSON.stringify(error));
 
-                if (error.response.data) {
+            if (error.response.data) {
 
-                    if (error.response.data.message) {
+                if (error.response.data.message) {
 
-                        Alert.show({
-                            title: 'Error',
-                            bodyIcon: 'fas fa-exclamation-circle',
-                            bodyMsg: error.response.data.message,
-                            onCallBack: CallBackFunction,
-                            try: true,
-                            code: error.response.status
-                        });
+                    Alert.show({
+                        title: 'Error',
+                        bodyIcon: 'fas fa-exclamation-circle',
+                        bodyMsg: error.response.data.message,
+                        onCallBack: CallBackFunction,
+                        try: true,
+                        code: error.response.status
+                    });
 
-                    } else if (error.response.data.exception) {
+                } else if (error.response.data.exception) {
 
-                        Alert.show({
-                            title: 'Error',
-                            bodyIcon: 'fas fa-exclamation-circle',
-                            bodyMsg: error.response.data.exception,
-                            onCallBack: CallBackFunction,
-                            try: true,
-                            code: error.response.status
-                        });
+                    Alert.show({
+                        title: 'Error',
+                        bodyIcon: 'fas fa-exclamation-circle',
+                        bodyMsg: error.response.data.exception,
+                        onCallBack: CallBackFunction,
+                        try: true,
+                        code: error.response.status
+                    });
 
-                    } else {
+                } else {
 
-                        Alert.show({
-                            title: 'Error',
-                            bodyIcon: 'fas fa-exclamation-circle',
-                            bodyMsg: error.response.data,
-                            onCallBack: CallBackFunction,
-                            try: true,
-                            code: error.response.status
-                        });
-
-                    }
+                    Alert.show({
+                        title: 'Error',
+                        bodyIcon: 'fas fa-exclamation-circle',
+                        bodyMsg: error.response.data,
+                        onCallBack: CallBackFunction,
+                        try: true,
+                        code: error.response.status
+                    });
 
                 }
 
-            });
+            }
+
+        });
 
     }
 
@@ -195,51 +195,51 @@ export default class HttpHandler {
             bodyMsg: 'Please wait ... !',
         });
 
-        return axios.delete(Url, {data: Data})
-            .catch(error => {
+        return axios.delete(Url, { data: Data })
+        .catch(error => {
 
-                console.log(JSON.stringify(error));
+            console.log(JSON.stringify(error));
 
-                if (error.response.data) {
+            if (error.response.data) {
 
-                    if (error.response.data.message) {
+                if (error.response.data.message) {
 
-                        Alert.show({
-                            title: 'Error',
-                            bodyIcon: 'fas fa-exclamation-circle',
-                            bodyMsg: error.response.data.message,
-                            onCallBack: CallBackFunction,
-                            try: true,
-                            code: error.response.status
-                        });
+                    Alert.show({
+                        title: 'Error',
+                        bodyIcon: 'fas fa-exclamation-circle',
+                        bodyMsg: error.response.data.message,
+                        onCallBack: CallBackFunction,
+                        try: true,
+                        code: error.response.status
+                    });
 
-                    } else if (error.response.data.exception) {
+                } else if (error.response.data.exception) {
 
-                        Alert.show({
-                            title: 'Error',
-                            bodyIcon: 'fas fa-exclamation-circle',
-                            bodyMsg: error.response.data.exception,
-                            onCallBack: CallBackFunction,
-                            try: true,
-                            code: error.response.status
-                        });
+                    Alert.show({
+                        title: 'Error',
+                        bodyIcon: 'fas fa-exclamation-circle',
+                        bodyMsg: error.response.data.exception,
+                        onCallBack: CallBackFunction,
+                        try: true,
+                        code: error.response.status
+                    });
 
-                    } else {
+                } else {
 
-                        Alert.show({
-                            title: 'Error',
-                            bodyIcon: 'fas fa-exclamation-circle',
-                            bodyMsg: error.response.data,
-                            onCallBack: CallBackFunction,
-                            try: true,
-                            code: error.response.status
-                        });
-
-                    }
+                    Alert.show({
+                        title: 'Error',
+                        bodyIcon: 'fas fa-exclamation-circle',
+                        bodyMsg: error.response.data,
+                        onCallBack: CallBackFunction,
+                        try: true,
+                        code: error.response.status
+                    });
 
                 }
 
-            });
+            }
+
+        });
 
     }
 

@@ -41,6 +41,15 @@ namespace Administration
             services.AddControllers();
             services.AddTransient<UserInfoRpo, UserInfoRpoImp>();
             services.AddTransient<MenuRpo, MenuRpoImp>();
+
+
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,6 +59,8 @@ namespace Administration
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors("MyPolicy");
 
             app.UseHttpsRedirection();
 

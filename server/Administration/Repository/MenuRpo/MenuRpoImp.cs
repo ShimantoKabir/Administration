@@ -69,7 +69,7 @@ namespace Administration.Repository.MenuRpo
                 
                 Menu menu = menus[i];
 
-                if(menu.parentId == pId){
+                if(menu.parentOid == pId){
 
                     List<Menu> children = this.getNestedMenu(menus,menu.id);
 

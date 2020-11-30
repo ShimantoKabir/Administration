@@ -1,8 +1,16 @@
 using Administration.Models;
+using Administration.Seed;
 using Microsoft.EntityFrameworkCore;
 
 namespace Administration.Database
 {
+    /*
+    *
+    * Two thins you need  to do before update migration
+    * 1. replace datetime(6) to datetime
+    * 2. createAt column should be like that bellow
+    * [createdAt = table.Column<DateTime>(defaultValueSql: "CURRENT_TIMESTAMP")]
+    */
     public class AdministrationDBCtx : DbContext
     {
 
@@ -15,6 +23,12 @@ namespace Administration.Database
         public DbSet<RestrictedMenu> restrictedMenus { get; set; }
         public DbSet<Role> roles { get; set; }
         public DbSet<UserConfiguration> userConfigurations { get; set; }
+        public DbSet<Power> powers {get; set;}
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.seedUserInfo();
+        }
 
     }
 }

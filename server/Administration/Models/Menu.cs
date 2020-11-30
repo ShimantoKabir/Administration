@@ -9,11 +9,19 @@ namespace Administration.Models
     public class Menu
     {
 
+        // Q1: Why orgOid is can be null?
+        // A1: Cause a menu with null orgOid is the default value. Whenever a new
+        // org registered those default value need to be auto insert.
+
+        // Q2: Is there any menu is for app owner administration menu
+        // A2: Yes, a menu with 0 orgOid is for app owner administration menu
+
         public int id { get; set; }
-        public int? orgId { get; set; }
+        public int oId { get; set; }
+        public int? orgOid { get; set; }
 
         [Required]
-        public int projectId { get; set; }
+        public int projectOid { get; set; }
 
         [Required]
         public String menuName { get; set; }
@@ -23,7 +31,7 @@ namespace Administration.Models
         public String path { get; set; }
 
         [Required]
-        public int parentId { get; set; }
+        public int parentOid { get; set; }
 
         [Required]
         public int power { get; set; }
@@ -31,6 +39,14 @@ namespace Administration.Models
         public int? modifiedBy { get; set; }
         public DateTime createdAt { get; set; }
 
+        [NotMapped]
+        public String text { get; set; }
+        [NotMapped]
+        public Menu data { get; set; }
+        [NotMapped]
+        public Menu state { get; set; }
+        [NotMapped]
+        public Boolean expendend { get; set; }
         [NotMapped]
         public List<Menu> children { get; set; }
 

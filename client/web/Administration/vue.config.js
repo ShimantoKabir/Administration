@@ -2,12 +2,22 @@ module.exports = {
   lintOnSave: false,
   runtimeCompiler: true,
   configureWebpack: {
-    //Necessary to run npm link https://webpack.js.org/configuration/resolve/#resolve-symlinks
     resolve: {
-       symlinks: false
+      symlinks: false
     }
   },
   transpileDependencies: [
     '@coreui/utils'
-  ]
+  ],
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true
+      },
+    },
+    host: 'localhost',
+    port: 5002,
+  }
+
 }

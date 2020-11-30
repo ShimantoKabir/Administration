@@ -7,7 +7,7 @@
                         <c-card-header>
                             <i class="fas fa-bell" ></i><strong> {{prop.title}}</strong>
                         </c-card-header>
-                        <c-card-body>
+                        <c-card-body class="alert-body" >
                             <i v-if="prop.bodyIcon" :class=prop.bodyIcon ></i>
                             {{prop.bodyMsg}}
                         </c-card-body>
@@ -16,7 +16,7 @@
                                 <c-button v-if="prop.try" color="primary" size="sm" v-on:click="tryAgain" >
                                     <i class="fas fa-redo" ></i>
                                 </c-button>
-                                <c-button v-if="prop.try" color="warning" size="sm" v-on:click="close" >
+                                <c-button v-if="prop.try" color="danger" size="sm" v-on:click="close" >
                                     <i class="fas fa-times-circle" ></i>
                                 </c-button>
                                 <c-button v-if="prop.ok" color="success" size="sm" v-on:click="close" >
@@ -86,7 +86,8 @@ export default {
             this.isOpen = true;
 
             this.prop.title = prop.title;
-            this.prop.bodyMsg = prop.bodyMsg.slice(0, 50000);
+            this.prop.bodyIcon = prop.bodyIcon;
+            this.prop.bodyMsg = prop.bodyMsg;
             this.prop.width = prop.width;
 
             this.prop.onCallBack = prop.onCallBack;
@@ -145,5 +146,16 @@ export default {
 .alert-footer{
     padding-left: 10px;
     padding-right: 10px;
+}
+.alert-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.alert-body > i {
+    font-size: 30px;
+    margin-right: 10px;
 }
 </style>
