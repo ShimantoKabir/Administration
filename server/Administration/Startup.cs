@@ -2,12 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Transactions;
 using Administration.Database;
 using Administration.Models;
 using Administration.Repository;
 using Administration.Repository.MenuRpo;
 using Administration.Repository.UserInfoRpo;
 using Administration.Services;
+using Hangfire;
+using Hangfire.MySql;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -35,21 +38,30 @@ namespace Administration
             services.AddDbContextPool<AdministrationDBCtx>(
                 options => options.UseMySql(
                     Configuration.GetConnectionString("administration")
-            ));
-            services.Configure<SmtpSetting>(Configuration.GetSection("SmtpSetting"));
-            services.AddSingleton<IMailer, Mailer>();
+                ));
+
+            services.AddHangfire(configuration => {
+                configuration.UseStorage(
+                    new MySqlStorage(
+                        Configuration.GetConnectionString("hangfire"),
+                        new MySqlStorageOptions
+                        {
+                            TablesPrefix = "Hangfire"
+                        }
+                    )
+                );
+            });
+            
             services.AddControllers();
             services.AddTransient<UserInfoRpo, UserInfoRpoImp>();
             services.AddTransient<MenuRpo, MenuRpoImp>();
-
-
+            
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
                 builder.AllowAnyOrigin()
-                       .AllowAnyMethod()
-                       .AllowAnyHeader();
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
             }));
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,17 +73,13 @@ namespace Administration
             }
 
             app.UseCors("MyPolicy");
-
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            app.UseHangfireDashboard();
+            app.UseHangfireServer();
+            
         }
     }
 }

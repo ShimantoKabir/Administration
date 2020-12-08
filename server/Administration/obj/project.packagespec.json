@@ -26,6 +26,14 @@
   "frameworks": {
     "netcoreapp3.1": {
       "dependencies": {
+        "Hangfire.AspNetCore": {
+          "target": "Package",
+          "version": "[1.7.18, )"
+        },
+        "Hangfire.MySqlStorage": {
+          "target": "Package",
+          "version": "[2.0.2, )"
+        },
         "MailKit": {
           "target": "Package",
           "version": "[2.9.0, )"
@@ -63,7 +71,7 @@
           "privateAssets": "all"
         }
       },
-      "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
+      "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.404/RuntimeIdentifierGraph.json"
     }
   }
 }

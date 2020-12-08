@@ -14,14 +14,9 @@ namespace Administration.Repository.UserInfoRpo
 
         private readonly AdministrationDBCtx dbCtx;
 
-        private readonly IMailer iMailer;
-
-        public UserInfoRpoImp(AdministrationDBCtx dbCtx, IMailer iMailer)
+        public UserInfoRpoImp(AdministrationDBCtx dbCtx)
         {
-
             this.dbCtx = dbCtx;
-            this.iMailer = iMailer;
-
         }
 
         public Response createUserInfo(Request request)
@@ -35,7 +30,6 @@ namespace Administration.Repository.UserInfoRpo
 
                 dbCtx.userInfos.Add(request.userInfo);
                 dbCtx.SaveChanges();
-                iMailer.SendEmailAsync(request.userInfo.email, "User Authentication.", "Hey, man.");
                 response.code = 200;
                 response.msg = "User info creation successful.";
                 dbCtx.Database.CommitTransaction();

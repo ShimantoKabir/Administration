@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Administration.Models;
 using Administration.Services;
+using Hangfire;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Administration.Controllers
@@ -12,24 +13,24 @@ namespace Administration.Controllers
     public class TestCtl : ControllerBase
     {
 
-        private readonly IMailer iMailer;
-        
-        public TestCtl(IMailer iMailer){
-            this.iMailer = iMailer;
-        }
-        
-        [HttpGet]
-        public ActionResult<Response> test()
+        [HttpGet("app")]
+        public ActionResult<Response> testApp()
         {
-
-            iMailer.SendEmailAsync("kabir3483@gmail.com", "Weather Report", "Detailed Weather Report");
-            Response response = new Response();
-            response.code = 200;
-            response.msg = "App running....!";
+            var response = new Response {code = 200, msg = "App running....!"};
             return response;
 
         }
 
+        [HttpPost("email")]
+        public ActionResult<Response> testEmail(EmailRequest emailRequest)
+        {
+            var mailer = new Mailer();
+            BackgroundJob.Enqueue(() => mailer.send(emailRequest));
+            Response response = new Response {code = 200, msg = "App running....!"};
+            return response;
+
+        }
+        
     }
 
 }

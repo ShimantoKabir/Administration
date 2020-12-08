@@ -92,7 +92,5 @@ namespace Administration.Seed
                         }
             );
         }
-
     }
-
 }

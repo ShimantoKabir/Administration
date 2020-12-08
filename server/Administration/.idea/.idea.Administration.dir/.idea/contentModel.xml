@@ -19,6 +19,7 @@
         <e p="AdministrationDBCtxModelSnapshot.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
+        <e p="EmailRequest.cs" t="Include" />
         <e p="Menu.cs" t="Include" />
         <e p="Organization.cs" t="Include" />
         <e p="Power.cs" t="Include" />
@@ -27,7 +28,6 @@
         <e p="Response.cs" t="Include" />
         <e p="RestrictedMenu.cs" t="Include" />
         <e p="Role.cs" t="Include" />
-        <e p="SmtpSetting.cs" t="Include" />
         <e p="UserConfiguration.cs" t="Include" />
         <e p="UserInfo.cs" t="Include" />
       </e>

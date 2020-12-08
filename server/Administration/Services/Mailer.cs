@@ -5,62 +5,62 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using MimeKit;
 using System;
+using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
+using MailKit.Security;
+using Microsoft.Extensions.Configuration;
 
 namespace Administration.Services
 {
-    public interface IMailer
+    public class Mailer
     {
-        Task SendEmailAsync(string email, string subject, string body);
-    }
-
-    public class Mailer : IMailer
-    {
-        private readonly SmtpSetting smtpSetting;
-        private readonly IWebHostEnvironment env;
-
-        public Mailer(IOptions<SmtpSetting> smtpSettings, IWebHostEnvironment env)
+        public async Task send(EmailRequest emailRequest)
         {
-            this.smtpSetting = smtpSettings.Value;
-            this.env = env;
-        }
+            var smtpSetting = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", true, true)
+                .Build()
+                .GetSection("SmtpSetting");
 
-        public async Task SendEmailAsync(string email, string subject, string body)
-        {
-            try
+            var mimeMessage = new MimeMessage
             {
-                var message = new MimeMessage();
-                message.From.Add(new MailboxAddress(smtpSetting.SenderName, smtpSetting.SenderEmail));
-                message.To.Add(new MailboxAddress(email));
-                message.Subject = subject;
-                message.Body = new TextPart("html")
+                Sender = MailboxAddress.Parse(smtpSetting["Email"]),
+                Subject = emailRequest.subject
+            };
+
+            foreach (var email in emailRequest.emails)
+            {
+                mimeMessage.To.Add(MailboxAddress.Parse(email));
+            }
+
+            var bodyBuilder = new BodyBuilder();
+            if (emailRequest.attachments != null)
+            {
+                foreach (var file in emailRequest.attachments.Where(file => file.Length > 0))
                 {
-                    Text = body
-                };
-
-                using (var client = new SmtpClient())
-                {
-                    client.ServerCertificateValidationCallback = (s, c, h, e) => true;
-
-                    if (env.IsDevelopment())
+                    byte[] fileBytes;
+                    await using (var ms = new MemoryStream())
                     {
-                        await client.ConnectAsync(smtpSetting.Server, smtpSetting.Port, true);
-                    }
-                    else
-                    {
-                        await client.ConnectAsync(smtpSetting.Server);
+                        await file.CopyToAsync(ms);
+                        fileBytes = ms.ToArray();
                     }
 
-                    await client.AuthenticateAsync(smtpSetting.Username, smtpSetting.Password);
-                    await client.SendAsync(message);
-                    Console.WriteLine("SendAsync");
-                    await client.DisconnectAsync(true);
+                    bodyBuilder.Attachments.Add(file.FileName, fileBytes, ContentType.Parse(file.ContentType));
                 }
             }
-            catch (Exception e)
-            {
-                throw new InvalidOperationException(e.Message);
-            }
+
+            bodyBuilder.HtmlBody = emailRequest.body;
+            mimeMessage.Body = bodyBuilder.ToMessageBody();
+
+            var smtp = new SmtpClient();
+            await smtp.ConnectAsync(
+                smtpSetting["Host"],
+                Convert.ToInt16(smtpSetting["Port"]),
+                SecureSocketOptions.StartTls);
+            await smtp.AuthenticateAsync(smtpSetting["Email"], smtpSetting["Password"]);
+            await smtp.SendAsync(mimeMessage);
+            await smtp.DisconnectAsync(true);
         }
     }
 }
