@@ -2604,24 +2604,30 @@
     ]
   },
   "packageFolders": {
-    "/home/kabir/.nuget/packages/": {}
+    "C:\\Users\\Dell\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kabir/Github/Administration/server/Administration/Administration.csproj",
+      "projectUniqueName": "C:\\Projects\\GitHub\\Administration\\server\\Administration\\Administration.csproj",
       "projectName": "Administration",
-      "projectPath": "/home/kabir/Github/Administration/server/Administration/Administration.csproj",
-      "packagesPath": "/home/kabir/.nuget/packages/",
-      "outputPath": "/home/kabir/Github/Administration/server/Administration/obj/",
+      "projectPath": "C:\\Projects\\GitHub\\Administration\\server\\Administration\\Administration.csproj",
+      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\GitHub\\Administration\\server\\Administration\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/home/kabir/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2683,7 +2689,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.404/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

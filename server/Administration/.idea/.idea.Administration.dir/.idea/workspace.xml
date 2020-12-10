@@ -23,47 +23,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76b3789d-86a2-4128-817a-50eaaee40716" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Models/EmailRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Dapper.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Hangfire.AspNetCore.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Hangfire.Core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Hangfire.MySql.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/System.Data.SqlClient.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/ca/Hangfire.Core.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/es/Hangfire.Core.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/fa/Hangfire.Core.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/fr/Hangfire.Core.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/nl/Hangfire.Core.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/pt-BR/Hangfire.Core.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/pt-PT/Hangfire.Core.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/pt/Hangfire.Core.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/sni.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/sni.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/sni.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Data.SqlClient.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/zh-TW/Hangfire.Core.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/zh/Hangfire.Core.resources.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Seed/ProjectSeeder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Seed/RoleSeeder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Administration.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Administration.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Administration.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Administration.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Administration.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Administration.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Administration.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Administration.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/TestCtl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/TestCtl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/SmtpSetting.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/UserInfoRpo/UserInfoRpoImp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/UserInfoRpo/UserInfoRpoImp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/AdministrationDBCtx.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Database/AdministrationDBCtx.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20201103052601_administration.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/20201210060515_m1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20201103052601_administration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/20201210060515_m1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/AdministrationDBCtxModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/AdministrationDBCtxModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Organization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Organization.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Power.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Power.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Project.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Project.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Role.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Role.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/UserConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/UserConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/UserInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/UserInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Seed/MenuSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Seed/MenuSeeder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Mailer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Mailer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Administration" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Administration" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Administration.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Administration.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Administration.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Administration.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Administration.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Administration.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Administration.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Administration.runtimeconfig.dev.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Administration.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Administration.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Administration.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Administration.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Administration" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Administration" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Administration.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Administration.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Administration.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Administration.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Administration.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Administration.csproj.FileListAbsolute.txt" afterDir="false" />
@@ -73,6 +60,7 @@
       <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,23 +70,30 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2C584246-F81B-4174-A7E6-721949C590C8/c4/21e59838/MySqlStorage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/48A35E50-F150-4CB8-A7B0-94ACDE79AE9B/1a/e36c74b6/HangfireServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F423A09D-18AD-41DA-973D-AA418BC06C2C/1/ConfigurationExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Seed/MenuSeeder.cs" />
         <option value="$PROJECT_DIR$/Program.cs" />
         <option value="$PROJECT_DIR$/Startup.cs" />
         <option value="$PROJECT_DIR$/Repository/UserInfoRpo/UserInfoRpoImp.cs" />
         <option value="$PROJECT_DIR$/Models/Email.cs" />
         <option value="$PROJECT_DIR$/Models/EmailRequest.cs" />
-        <option value="$PROJECT_DIR$/appsettings.json" />
         <option value="$PROJECT_DIR$/Controllers/TestCtl.cs" />
         <option value="$PROJECT_DIR$/Services/Mailer.cs" />
+        <option value="$PROJECT_DIR$/appsettings.json" />
+        <option value="$PROJECT_DIR$/Models/Power.cs" />
+        <option value="$PROJECT_DIR$/Models/Organization.cs" />
+        <option value="$PROJECT_DIR$/Models/Project.cs" />
+        <option value="$PROJECT_DIR$/Models/UserInfo.cs" />
+        <option value="$PROJECT_DIR$/Migrations/20201210060515_m1.cs" />
+        <option value="$PROJECT_DIR$/Models/Menu.cs" />
+        <option value="$PROJECT_DIR$/Models/UserConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Models/Role.cs" />
+        <option value="$PROJECT_DIR$/Seed/RoleSeeder.cs" />
+        <option value="$PROJECT_DIR$/Seed/ProjectSeeder.cs" />
+        <option value="$PROJECT_DIR$/Database/AdministrationDBCtx.cs" />
+        <option value="$PROJECT_DIR$/Seed/MenuSeeder.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4e7ff6eb-0e94-48c8-a4fe-cdfc9868030d/console_1.sql" />
       </list>
     </option>
   </component>
@@ -113,10 +108,11 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Administration">
@@ -165,6 +161,10 @@
       <workItem from="1607315981722" duration="5958000" />
       <workItem from="1607341313167" duration="819000" />
       <workItem from="1607397744081" duration="5133000" />
+      <workItem from="1607430034669" duration="991000" />
+      <workItem from="1607440283380" duration="739000" />
+      <workItem from="1607486724978" duration="3726000" />
+      <workItem from="1607577802750" duration="17933000" />
     </task>
     <servers />
   </component>
@@ -190,6 +190,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607492332715">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1607492332715" />
     <state width="1280" height="172" key="GridCell.Tab.0.bottom" timestamp="1607402881300">
       <screen x="40" y="27" width="1326" height="741" />
     </state>
@@ -206,17 +210,23 @@
       <screen x="40" y="27" width="1326" height="741" />
     </state>
     <state width="1280" height="172" key="GridCell.Tab.0.right/40.27.1326.741@40.27.1326.741" timestamp="1607402881300" />
+    <state width="189" height="455" key="HiddenNamespacesPopup" timestamp="1607492340399">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="189" height="455" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1607492340399" />
     <state x="498" y="94" width="399" height="613" key="RiderGenerateDialog" timestamp="1607399363927">
       <screen x="40" y="27" width="1326" height="741" />
     </state>
     <state x="498" y="94" width="399" height="613" key="RiderGenerateDialog/40.27.1326.741@40.27.1326.741" timestamp="1607399363927" />
-    <state x="192" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1606283761549">
-      <screen x="40" y="27" width="1326" height="741" />
+    <state x="176" y="4" width="1022" height="737" key="SettingsEditor" timestamp="1607604236935">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="176" y="4" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607604236935" />
     <state x="192" y="31" width="1022" height="737" key="SettingsEditor/40.27.1326.741@40.27.1326.741" timestamp="1606283761549" />
-    <state x="140" y="127" width="1126" height="541" key="VCS.FileHistoryDialog" timestamp="1607399289398">
-      <screen x="40" y="27" width="1326" height="741" />
+    <state x="116" y="111" width="1305" height="602" key="VCS.FileHistoryDialog" timestamp="1607487767282">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="116" y="111" width="1305" height="602" key="VCS.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1607487767282" />
     <state x="140" y="127" width="1126" height="541" key="VCS.FileHistoryDialog/40.27.1326.741@40.27.1326.741" timestamp="1607399289398" />
   </component>
 </project>

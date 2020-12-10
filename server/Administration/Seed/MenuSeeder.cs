@@ -12,29 +12,28 @@ namespace Administration.Seed
                 {
                     id = 1,
                     oId = 1,
-                    orgOid = 0,
                     projectOid = 1,
                     menuName = "Administration",
                     tooltip = "Administration project root menu.",
-                    parentOid = 0
+                    parentOid = 0,
+                    powerValue = 0
                 },
                     new Menu
                     {
                         id = 2,
                         oId = 2,
-                        orgOid = 0,
                         projectOid = 1,
                         menuName = "User",
                         tooltip = "User menu root.",
                         path = "/user",
                         component = "/User",
-                        parentOid = 1
+                        parentOid = 1,
+                        powerValue = 5
                     },
                         new Menu
                         {
                             id = 3,
                             oId = 3,
-                            orgOid = 0,
                             projectOid = 1,
                             menuName = "Manage",
                             path = "/user/manage",
@@ -46,7 +45,6 @@ namespace Administration.Seed
                     {
                         id = 4,
                         oId = 4,
-                        orgOid = 0,
                         projectOid = 1,
                         menuName = "Menu",
                         path = "/menu",
@@ -58,7 +56,6 @@ namespace Administration.Seed
                         {
                             id = 5,
                             oId = 5,
-                            orgOid = 0,
                             projectOid = 1,
                             menuName = "Manage",
                             path = "/menu/manage",
@@ -70,7 +67,6 @@ namespace Administration.Seed
                         {
                             id = 5,
                             oId = 5,
-                            orgOid = 0,
                             projectOid = 1,
                             menuName = "Role Wise Permission",
                             path = "/menu/role-wise-permission",
@@ -82,7 +78,6 @@ namespace Administration.Seed
                         {
                             id = 6,
                             oId = 6,
-                            orgOid = 0,
                             projectOid = 1,
                             menuName = "User Wise Permission",
                             path = "/menu/user-wise-permission",

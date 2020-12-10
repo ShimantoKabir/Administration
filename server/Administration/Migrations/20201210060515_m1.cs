@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Administration.Migrations
 {
-    public partial class administration : Migration
+    public partial class m1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -25,7 +25,8 @@ namespace Administration.Migrations
                     power = table.Column<int>(nullable: false),
                     ip = table.Column<string>(nullable: true),
                     modifiedBy = table.Column<int>(nullable: true),
-                    createdAt = table.Column<DateTime>(defaultValueSql: "CURRENT_TIMESTAMP")
+                    createdAt = table.Column<DateTime>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn)
                 },
                 constraints: table =>
                 {
@@ -42,7 +43,8 @@ namespace Administration.Migrations
                     orgName = table.Column<string>(nullable: false),
                     ip = table.Column<string>(nullable: true),
                     modifiedBy = table.Column<int>(nullable: true),
-                    createdAt = table.Column<DateTime>(defaultValueSql: "CURRENT_TIMESTAMP")
+                    createdAt = table.Column<DateTime>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn)
                 },
                 constraints: table =>
                 {
@@ -60,7 +62,8 @@ namespace Administration.Migrations
                     powerValue = table.Column<int>(nullable: false),
                     ip = table.Column<string>(nullable: true),
                     modifiedBy = table.Column<int>(nullable: true),
-                    createdAt = table.Column<DateTime>(defaultValueSql: "CURRENT_TIMESTAMP")
+                    createdAt = table.Column<DateTime>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn)
                 },
                 constraints: table =>
                 {
@@ -77,7 +80,8 @@ namespace Administration.Migrations
                     projectName = table.Column<string>(nullable: false),
                     ip = table.Column<string>(nullable: true),
                     modifiedBy = table.Column<int>(nullable: true),
-                    createdAt = table.Column<DateTime>(defaultValueSql: "CURRENT_TIMESTAMP")
+                    createdAt = table.Column<DateTime>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn)
                 },
                 constraints: table =>
                 {
@@ -110,7 +114,8 @@ namespace Administration.Migrations
                     roleName = table.Column<string>(nullable: false),
                     ip = table.Column<string>(nullable: true),
                     modifiedBy = table.Column<int>(nullable: true),
-                    createdAt = table.Column<DateTime>(defaultValueSql: "CURRENT_TIMESTAMP")
+                    createdAt = table.Column<DateTime>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn)
                 },
                 constraints: table =>
                 {
@@ -130,7 +135,8 @@ namespace Administration.Migrations
                     opAccess = table.Column<string>(nullable: true),
                     ip = table.Column<string>(nullable: true),
                     modifiedBy = table.Column<int>(nullable: true),
-                    createdAt = table.Column<DateTime>(defaultValueSql: "CURRENT_TIMESTAMP")
+                    createdAt = table.Column<DateTime>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn)
                 },
                 constraints: table =>
                 {
@@ -153,7 +159,8 @@ namespace Administration.Migrations
                     imgUrl = table.Column<string>(nullable: true),
                     ip = table.Column<string>(nullable: true),
                     modifiedBy = table.Column<int>(nullable: true),
-                    createdAt = table.Column<DateTime>(defaultValueSql: "CURRENT_TIMESTAMP")
+                    createdAt = table.Column<DateTime>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.ComputedColumn)
                 },
                 constraints: table =>
                 {
@@ -162,13 +169,13 @@ namespace Administration.Migrations
 
             migrationBuilder.InsertData(
                 table: "userInfos",
-                columns: new[] { "id", "createdAt", "email", "imgUrl", "ip", "modifiedBy", "oId", "orgOid", "password", "socialLoginId", "userId", "userName" },
+                columns: new[] { "id", "email", "imgUrl", "ip", "modifiedBy", "oId", "orgOid", "password", "socialLoginId", "userId", "userName" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "developer@mail.com", null, null, null, 1, 0, "3dacbce532ccd48f27fa62e993067b3c35f094f7", null, "developer", "developer" },
-                    { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "qa@mail.com", null, null, null, 2, 0, "d3c583412a36313ab5e24293924c39a36b842c56", null, "qa", "qa" },
-                    { 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "cto@mail.com", null, null, null, 3, 0, "19f7ca240c1a90751ff47695616871db95411694", null, "cto", "cto" },
-                    { 4, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "ceo@mail.com", null, null, null, 4, 0, "9d382342daac150ef51c8383dcf21ff57743b96d", null, "ceo", "ceo" }
+                    { 1, "developer@mail.com", null, null, null, 1, 0, "3dacbce532ccd48f27fa62e993067b3c35f094f7", null, "developer", "developer" },
+                    { 2, "qa@mail.com", null, null, null, 2, 0, "d3c583412a36313ab5e24293924c39a36b842c56", null, "qa", "qa" },
+                    { 3, "cto@mail.com", null, null, null, 3, 0, "19f7ca240c1a90751ff47695616871db95411694", null, "cto", "cto" },
+                    { 4, "ceo@mail.com", null, null, null, 4, 0, "9d382342daac150ef51c8383dcf21ff57743b96d", null, "ceo", "ceo" }
                 });
         }
 

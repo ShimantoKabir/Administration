@@ -28,6 +28,10 @@ namespace Administration.Database
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.seedUserInfo();
+            modelBuilder.seedPower();
+            modelBuilder.seedRole();
+            modelBuilder.seedProject();
+            modelBuilder.seedMenu();
         }
 
     }

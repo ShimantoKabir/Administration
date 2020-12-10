@@ -3,14 +3,16 @@ using System;
 using Administration.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Administration.Migrations
 {
     [DbContext(typeof(AdministrationDBCtx))]
-    partial class AdministrationDBCtxModelSnapshot : ModelSnapshot
+    [Migration("20201210060515_m1")]
+    partial class m1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -123,43 +125,6 @@ namespace Administration.Migrations
                     b.HasKey("id");
 
                     b.ToTable("powers");
-
-                    b.HasData(
-                        new
-                        {
-                            id = 1,
-                            createdAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            powerName = "General",
-                            powerValue = 5
-                        },
-                        new
-                        {
-                            id = 2,
-                            createdAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            powerName = "Colonel",
-                            powerValue = 4
-                        },
-                        new
-                        {
-                            id = 3,
-                            createdAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            powerName = "Major",
-                            powerValue = 3
-                        },
-                        new
-                        {
-                            id = 4,
-                            createdAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            powerName = "Captain",
-                            powerValue = 2
-                        },
-                        new
-                        {
-                            id = 5,
-                            createdAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            powerName = "Lieutenant",
-                            powerValue = 1
-                        });
                 });
 
             modelBuilder.Entity("Administration.Models.Project", b =>

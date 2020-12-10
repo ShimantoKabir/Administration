@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Administration.Models
 {
@@ -8,9 +9,11 @@ namespace Administration.Models
         public int id { get; set; }
         public int oId { get; set; }
         [Required]
-        public String orgName { get; set; }
-        public String ip { get; set; }
+        public string? orgName { get; set; }
+        public string? ip { get; set; }
         public int? modifiedBy { get; set; }
+        
+        [Required, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime createdAt { get; set; }
 
     }
